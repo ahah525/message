@@ -15,17 +15,16 @@
     <div class="py-5 text-center">
         <h2 th:text="#{page.addItem}">상품 등록</h2>
     </div>
-    <h4 class="mb-3">상품 입력</h4>
+    <h4 class="mb-3" th:text="#{page.enter}">상품 입력</h4>
     <form action="item.html" th:action th:object="${item}" method="post">
         <div>
-            <label for="itemName" th:text="#{label.item.itemName}">상품명</
-            label>
+            <label for="itemName" th:text="#{label.item.itemName}">상품명</label>
             <input type="text" id="itemName" th:field="*{itemName}"
                    class="form-control" placeholder="이름을 입력하세요">
         </div>
         <div>
             <label for="price" th:text="#{label.item.price}">가격</label>
-            <input type="text" id="price" th:field="*{price}" class="formcontrol" placeholder="가격을 입력하세요">
+            <input type="text" id="price" th:field="*{price}" class="form-control" placeholder="가격을 입력하세요">
         </div>
         <div>
             <label for="quantity" th:text="#{label.item.quantity}">수량</label>
